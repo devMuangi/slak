@@ -5,6 +5,7 @@ import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import db from "./firebase";
 import Message from "./Message";
+import ChatInput from "./ChatInput";
 
 function Chat() {
     // useparams hook pulls router id
@@ -54,6 +55,7 @@ console.log(roomMessages);
                        />
                 ))}
             </div>
+            <ChatInput channelName={roomDetails?.name} channelId={roomDetails?.id}/>
         </div>
     )
 }
